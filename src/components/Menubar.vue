@@ -42,7 +42,7 @@ export default {
   data: function () {
     return {
       location: this.$route.name,
-      showLogout: true
+      showLogout: false
     }
   },
 }
