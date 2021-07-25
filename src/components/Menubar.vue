@@ -1,14 +1,23 @@
 <template>
   <div class="menubar">
-      <img alt="Isec logo" src="../assets/logo.png">
-      <ul>
-          <router-link to="/"><li :class="{ active: location === 'home' }"><HomeIcon />Home</li></router-link>
-          <router-link to="/map"><li :class="{ active: location === 'map' }"><BarChart2Icon />Kaart overzicht</li></router-link>
-          <router-link to="/reports"><li :class="{ active: location === 'reports' }"><MailIcon />Meldingen<span class="number">16</span></li></router-link>
-          <router-link to="/users"><li :class="{ active: location === 'users' }"><UsersIcon />Gebruikers</li></router-link>
-          <router-link to="/profile"><li :class="{ active: location === 'profile' }"><UserIcon />Profiel</li></router-link>
-          <router-link to="/logout"><li class="logout" :class="{ active: location === 'logout' }"><LogOutIcon />Log Uit</li></router-link>
-      </ul>
+      <div class="menu">
+        <img alt="Isec logo" src="../assets/logo.png">
+        <ul>
+            <router-link to="/"><li :class="{ active: location === 'home' }"><HomeIcon />Home</li></router-link>
+            <router-link to="/map"><li :class="{ active: location === 'map' }"><BarChart2Icon />Kaart overzicht</li></router-link>
+            <router-link to="/reports"><li :class="{ active: location === 'reports' }"><MailIcon />Meldingen<span class="number">16</span></li></router-link>
+            <router-link to="/users"><li :class="{ active: location === 'users' }"><UsersIcon />Gebruikers</li></router-link>
+            <router-link to="/profile"><li :class="{ active: location === 'profile' }"><UserIcon />Profiel</li></router-link>
+            <li @click="showLogout = true" class="logout" :class="{ active: location === 'logout' }"><LogOutIcon />Log Uit</li>
+        </ul>
+        <div class="mask" v-if="showLogout"  @click="showLogout = false">
+          <div class="alert">
+            <p>Weet je zeker dat je uit wilt loggen?</p>
+            <div><button @click="showLogout = false">Ja</button>
+            <button @click="showLogout = false">Nee</button></div>
+          </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -32,14 +41,50 @@ export default {
   }, 
   data: function () {
     return {
-      location: this.$route.name
+      location: this.$route.name,
+      showLogout: true
     }
   },
 }
 </script>
 
 <style scoped>
-.menubar{
+.mask{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width:100vw;
+    height:100vh;
+    left:0;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.alert{
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction:column;
+  padding:40px;
+  text-align: center;
+  font-weight:bold;
+}
+.alert button{
+  color: white;
+  background-color: #043c87;
+  width:60px;
+  height: 30px;
+  margin:20px;
+    margin-top: 40px;
+}
+.alert button:hover{
+  background-color: #137afb;
+}
+.menu{
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -82,7 +127,7 @@ li span{
   img{
     width:80%;
   }
- .menubar{
+ .menu{
      background-color: #d9eafe;
      color: rgba(0,60,136,1);
      width: 250px;
