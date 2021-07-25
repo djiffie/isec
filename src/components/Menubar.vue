@@ -2,13 +2,13 @@
   <div class="menubar">
       <img alt="Isec logo" src="../assets/logo.png">
       <ul>
-          <li class="active"><HomeIcon />Home</li>
-          <li><BarChart2Icon />Kaart overzicht</li>
-          <li><MailIcon />Meldingen<span class="number">16</span></li>
-          <li><UsersIcon />Gebruikers</li>
-          <li><UserIcon />Profiel</li>
-          <li><SettingsIcon />Instellingen</li>
-          <li><LogOutIcon />Log Uit</li>
+          <router-link to="/"><li :class="{ active: location === 'home' }"><HomeIcon />Home</li></router-link>
+          <router-link to="/map"><li :class="{ active: location === 'map' }"><BarChart2Icon />Kaart overzicht</li></router-link>
+          <router-link to="/reports"><li :class="{ active: location === 'reports' }"><MailIcon />Meldingen<span class="number">16</span></li></router-link>
+          <router-link to="/users"><li :class="{ active: location === 'users' }"><UsersIcon />Gebruikers</li></router-link>
+          <router-link to="/profile"><li :class="{ active: location === 'profile' }"><UserIcon />Profiel</li></router-link>
+          <router-link to="/settings"><li :class="{ active: location === 'settings' }"><SettingsIcon />Instellingen</li></router-link>
+          <router-link to="/logout"><li :class="{ active: location === 'logout' }"><LogOutIcon />Log Uit</li></router-link>
       </ul>
   </div>
 </template>
@@ -27,7 +27,16 @@ export default {
     SettingsIcon,
     LogOutIcon,
   },
-  
+  watch:{
+    $route (){
+        this.location = this.$route.name;
+    }
+  }, 
+  data: function () {
+    return {
+      location: this.$route.name
+    }
+  },
 }
 </script>
 
