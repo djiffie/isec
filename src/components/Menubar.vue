@@ -7,14 +7,13 @@
           <router-link to="/reports"><li :class="{ active: location === 'reports' }"><MailIcon />Meldingen<span class="number">16</span></li></router-link>
           <router-link to="/users"><li :class="{ active: location === 'users' }"><UsersIcon />Gebruikers</li></router-link>
           <router-link to="/profile"><li :class="{ active: location === 'profile' }"><UserIcon />Profiel</li></router-link>
-          <router-link to="/settings"><li :class="{ active: location === 'settings' }"><SettingsIcon />Instellingen</li></router-link>
-          <router-link to="/logout"><li :class="{ active: location === 'logout' }"><LogOutIcon />Log Uit</li></router-link>
+          <router-link to="/logout"><li class="logout" :class="{ active: location === 'logout' }"><LogOutIcon />Log Uit</li></router-link>
       </ul>
   </div>
 </template>
 
 <script>
-import { HomeIcon, BarChart2Icon, MailIcon, UsersIcon, UserIcon, SettingsIcon, LogOutIcon} from 'vue-feather-icons';
+import { HomeIcon, BarChart2Icon, MailIcon, UsersIcon, UserIcon, LogOutIcon} from 'vue-feather-icons';
 
 export default {
   name: 'Menubar',
@@ -24,7 +23,6 @@ export default {
     MailIcon,
     UsersIcon,
     UserIcon,
-    SettingsIcon,
     LogOutIcon,
   },
   watch:{
@@ -88,5 +86,9 @@ li span{
      background-color: #d9eafe;
      color: rgba(0,60,136,1);
      width: 250px;
+ }
+ .logout{
+   border-top: solid 1px grey;
+   margin-top:20px;
  }
 </style>
