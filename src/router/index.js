@@ -5,6 +5,8 @@ import map from '@/views/Map'
 import profile from '@/views/Profile'
 import users from '@/views/Users'
 import reports from '@/views/Reports'
+import reportDetails from '@/views/ReportDetails'
+
 
 
 
@@ -36,6 +38,11 @@ export default new Router({
       path: '/reports',
       name: 'reports',
       component: reports
+    },
+    {
+      path: '/report/:id',
+      name: 'report',
+      component: reportDetails
     },
     { path: '*', redirect: '/' }
   ]

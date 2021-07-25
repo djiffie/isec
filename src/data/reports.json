@@ -3,112 +3,144 @@
       "id": 1,
       "type": "veiligheid",
       "prio": "hoog",
-      "status": "open",
-      "description": "Hier komt een korte beschrijving van een melding"
+      "status": "hoog",
+      "description": "Hier komt een korte beschrijving van een melding",
+      "x": "10%",
+      "y": "10%"
     },
     {
         "id": 2,
         "type": "veiligheid",
         "prio": "hoog",
         "status": "open",
-        "description": "Hier komt een korte beschrijving van een melding"
+        "description": "Hier komt een korte beschrijving van een melding",
+        "x": "15%",
+        "y": "30%"
       },
       {
         "id": 3,
         "type": "controle",
-        "prio": "hoog",
+        "prio": "laag",
         "status": "open",
-        "description": "Hier komt een korte beschrijving van een melding"
+        "description": "Hier komt een korte beschrijving van een melding",
+        "x": "25%",
+        "y": "25%"
       },
       {
         "id": 4,
         "type": "veiligheid",
         "prio": "hoog",
         "status": "open",
-        "description": "Hier komt een korte beschrijving van een melding"
+        "description": "Hier komt een korte beschrijving van een melding",
+        "x": "30%",
+        "y": "20%"
       },
       {
         "id": 5,
         "type": "informatie",
         "prio": "hoog",
-        "status": "open",
-        "description": "Hier komt een korte beschrijving van een melding"
+        "status": "laag",
+        "description": "Hier komt een korte beschrijving van een melding",
+        "x": "10%",
+        "y": "50%"
       },
       {
         "id": 6,
         "type": "controle",
         "prio": "hoog",
         "status": "open",
-        "description": "Hier komt een korte beschrijving van een melding"
+        "description": "Hier komt een korte beschrijving van een melding",
+        "x": "20%",
+        "y": "40%"
       },
       {
         "id": 7,
         "type": "controle",
-        "prio": "hoog",
+        "prio": "laag",
         "status": "open",
-        "description": "Hier komt een korte beschrijving van een melding"
+        "description": "Hier komt een korte beschrijving van een melding",
+        "x": "40%",
+        "y": "30%"
       },
       {
         "id": 8,
         "type": "veiligheid",
         "prio": "hoog",
         "status": "open",
-        "description": "Hier komt een korte beschrijving van een melding"
+        "description": "Hier komt een korte beschrijving van een melding",
+        "x": "20%",
+        "y": "70%"
       },
       {
         "id": 9,
         "type": "informatie",
         "prio": "hoog",
         "status": "open",
-        "description": "Hier komt een korte beschrijving van een melding"
+        "description": "Hier komt een korte beschrijving van een melding",
+        "x": "22%",
+        "y": "80%"
       },
       {
         "id": 10,
         "type": "veiligheid",
         "prio": "hoog",
         "status": "open",
-        "description": "Hier komt een korte beschrijving van een melding"
+        "description": "Hier komt een korte beschrijving van een melding",
+        "x": "10%",
+        "y": "76%"
       },
       {
         "id": 11,
         "type": "controle",
         "prio": "hoog",
         "status": "open",
-        "description": "Hier komt een korte beschrijving van een melding"
+        "description": "Hier komt een korte beschrijving van een melding",
+        "x": "50%",
+        "y": "80%"
       },
       {
         "id": 12,
         "type": "informatie",
         "prio": "hoog",
         "status": "open",
-        "description": "Hier komt een korte beschrijving van een melding"
+        "description": "Hier komt een korte beschrijving van een melding",
+        "x": "10%",
+        "y": "90%"
       },
       {
         "id": 13,
         "type": "controle",
         "prio": "hoog",
         "status": "open",
-        "description": "Hier komt een korte beschrijving van een melding"
+        "description": "Hier komt een korte beschrijving van een melding",
+        "x": "40%",
+        "y": "70%"
       },
       {
         "id": 14,
         "type": "controle",
-        "prio": "hoog",
+        "prio": "laag",
         "status": "open",
-        "description": "Hier komt een korte beschrijving van een melding"
+        "description": "Hier komt een korte beschrijving van een melding",
+        "x": "35%",
+        "y": "10%"
       },
       {
         "id": 15,
         "type": "informatie",
         "prio": "hoog",
         "status": "open",
-        "description": "Hier komt een korte beschrijving van een melding"
+        "description": "Hier komt een korte beschrijving van een melding",
+        "x": "30%",
+        "y": "60%"
       },
       {
         "id": 16,
         "type": "informatie",
-        "prio": "hoog",
+        "prio": "laag",
         "status": "open",
-        "description": "Hier komt een korte beschrijving van een melding"
+        "description": "Hier komt een korte beschrijving van een melding",
+        "x": "30%",
+        "y": "50%"
       }
   ]

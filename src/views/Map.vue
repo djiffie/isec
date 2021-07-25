@@ -1,17 +1,18 @@
 <template>
   <div class="map" >
       <h1>Kaart overzicht</h1>
-      
-      <Report v-for="report in reports" 
-        :key="report.id" 
-        :x="report.x" 
-        :y='report.y'
-        :id='report.id'
-        :active="activeReport.id === report.id"
-        :type="report.type"
-        :status="report.status"
-        :prio="report.prio" 
-        @reportClicked="onClicked"/>
+      <div class="reports">
+        <Report v-for="report in reports" 
+          :key="report.id" 
+          :x="report.x" 
+          :y='report.y'
+          :id='report.id'
+          :active="activeReport.id === report.id"
+          :type="report.type"
+          :status="report.status"
+          :prio="report.prio" 
+          @reportClicked="onClicked"/>
+        </div>
 
       <div v-if="activeReport.id" class="details">
         <div class="locatie">
@@ -29,7 +30,7 @@
             <li><span>Status:</span> {{activeReport.status}}</li>
             <li><span>Prioriteit:</span> {{activeReport.prio}}</li>
           </ul>
-          <router-link to="/report"><span class="meer-info">Meer info<ChevronRightIcon /></span></router-link>
+          <router-link :to="'/report/'+activeReport.id"><span class="meer-info">Meer info<ChevronRightIcon /></span></router-link>
         </div>
       </div>
 
@@ -39,6 +40,7 @@
 <script>
 import { ChevronRightIcon } from 'vue-feather-icons';
 import Report from '../components/Report.vue';
+import data from '../data/reports.json';
 
 export default {
   name: 'Map',
@@ -55,68 +57,18 @@ export default {
   data: function () {
     return {
       activeReport: {},
-      reports: [
-        {
-          id: 1,
-          type: "veiligheid",
-          status: "open",
-          prio: "laag",
-          x: "450px",
-          y: "350px",
-          active: false
-        },
-        {
-          id: 2,
-          type: "informatie",
-          status: "open",
-          prio: "hoog",
-          x: "550px",
-          y: "300px",
-          active: false
-        },
-        {
-          id: 3,
-          type: "controle",
-          status: "open",
-          prio: "laag",
-          x: "750px",
-          y: "350px",
-          active: false
-        },
-        {
-          id: 4,
-          type: "controle",
-          status: "open",
-          prio: "hoog",
-          x: "450px",
-          y: "950px",
-          active: false
-        },
-        {
-          id: 5,
-          type: "informatie",
-          status: "open",
-          prio: "laag",
-          x: "525px",
-          y: "750px",
-          active: false
-        },
-        {
-          id: 6,
-          type: "veiligheid",
-          status: "open",
-          prio: "hoog",
-          x: "666px",
-          y: "666px",
-          active: false
-        }
-      ]
+      reports: data
     }
   },
 }
 </script>
 
 <style scoped>
+.reports{
+  position: relative;
+  width:100%;
+  height:100%;
+}
 .details{
   position: absolute;
   right:100px;
