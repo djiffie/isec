@@ -26,7 +26,8 @@ export default {
     width: 1000px;
   }
   .users{
-    padding-left: 100px;
-    padding-top:100px;
+    padding-left: 50px;
+    padding-top:50px;
+    padding-bottom: 100px;
   }
 </style>

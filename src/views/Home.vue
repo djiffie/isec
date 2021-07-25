@@ -30,8 +30,9 @@ export default {
     width: 1000px;
   }
   .home{
-    padding-left: 100px;
-    padding-top:100px;
+    padding-left: 50px;
+    padding-top:50px;
+    padding-bottom: 100px;
   }
   .more{
     margin-top:50px;

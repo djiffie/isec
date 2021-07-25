@@ -23,15 +23,15 @@ export default {
   }
   .profile img{
     position: absolute;
-    left: 100px;
-    top: 100px;
+    left: 50px;
+    top: 50px;
     width:1000px;
     height:auto;
   }
   .info{
     position: absolute;
-    left:462px;
-    top:323px;
+    left:412px;
+    top:273px;
   }
   h2{
     color:#043c87;

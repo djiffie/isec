@@ -134,8 +134,9 @@ export default {
     width:450px;
   }
   .map{
-    padding-left: 100px;
-    padding-top:90px;
+    padding-left: 50px;
+    padding-top:40px;
+    padding-bottom: 100px;
     background-image: url("../assets/map.jpg");
     width:100%;
     height:100vh;
