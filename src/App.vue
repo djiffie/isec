@@ -23,5 +23,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
 
   display: flex;
+  padding-left: 250px;
 }
 </style>

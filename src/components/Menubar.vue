@@ -42,10 +42,12 @@ export default {
 
 <style scoped>
 .menubar{
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  left:0;
 }
 ul{
   width: 100%;
