@@ -3,8 +3,8 @@
       <h1>Overzicht</h1>
       <img class="hoeveelheid" alt="hoeveelheid" src="../assets/hoeveelheid.png">
       <div class="more">
-        <img class="map" alt="map" src="../assets/map.png">
-        <img class="reports" alt="reports" src="../assets/reports.png">
+        <router-link to="/map"><img class="map" alt="map" src="../assets/map.png"></router-link>
+        <router-link to="/reports"><img class="reports" alt="reports" src="../assets/reports.png"></router-link>
       </div>
   </div>
 </template>

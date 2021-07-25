@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import home from '@/views/Home'
 import map from '@/views/Map'
 import profile from '@/views/Profile'
+import users from '@/views/Users'
+
 
 
 Vue.use(Router)
@@ -22,6 +24,11 @@ export default new Router({
       path: '/profile',
       name: 'profile',
       component: profile
+    },
+    {
+      path: '/users',
+      name: 'users',
+      component: users
     },
     { path: '*', redirect: '/' }
   ]
